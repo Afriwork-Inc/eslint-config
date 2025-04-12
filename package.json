@@ -56,7 +56,6 @@
     "simple-git-hooks": "catalog:cli",
     "tinyexec": "catalog:utils",
     "tsup": "catalog:cli",
-    "tsx": "catalog:cli",
     "typescript": "catalog:cli",
     "vitest": "catalog:testing",
     "vitest-package-exports": "catalog:testing",

@@ -65,10 +65,14 @@ catalogs:
 importers:
 
   .:
-    devDependencies:
+    dependencies:
       '@antfu/eslint-config':
         specifier: catalog:cli
         version: 4.12.0(@typescript-eslint/utils@8.29.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(@vue/compiler-sfc@3.5.13)(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.14.1)(jiti@2.4.2)(tsx@4.19.3)(yaml@2.7.0))
+      eslint-flat-config-utils:
+        specifier: catalog:utils
+        version: 2.0.1
+    devDependencies:
       '@antfu/ni':
         specifier: catalog:cli
         version: 24.1.0
@@ -87,9 +91,6 @@ importers:
       eslint:
         specifier: catalog:cli
         version: 9.22.0(jiti@2.4.2)
-      eslint-flat-config-utils:
-        specifier: catalog:utils
-        version: 2.0.1
       eslint-plugin-tailwindcss:
         specifier: catalog:cli
         version: 3.18.0(tailwindcss@3.4.17)

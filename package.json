@@ -42,15 +42,17 @@
       "optional": true
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "@antfu/eslint-config": "catalog:cli",
+    "eslint-flat-config-utils": "catalog:utils"
+  },
+  "devDependencies": {
     "@antfu/ni": "catalog:cli",
     "@antfu/utils": "catalog:inlined",
     "@types/eslint-plugin-tailwindcss": "catalog:types",
     "@types/node": "catalog:types",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
-    "eslint-flat-config-utils": "catalog:utils",
     "eslint-plugin-tailwindcss": "catalog:cli",
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",

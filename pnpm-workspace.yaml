@@ -1,21 +1,14 @@
-packages:
-  - playground
-  - docs
-  - packages/*
-  - examples/*
 catalogs:
   cli:
-    '@antfu/eslint-config': ^4.11.0
+    '@antfu/eslint-config': ^4.12.0
     '@antfu/ni': ^24.3.0
     bumpp: ^10.1.0
     eslint: ^9.24.0
     eslint-plugin-tailwindcss: ^3.18.0
-    lint-staged: ^15.5.0
+    lint-staged: ^15.5.1
     simple-git-hooks: ^2.12.1
-    tsx: ^4.19.3
+    tsup: ^8.4.0
     typescript: ^5.8.3
-    unbuild: ^3.5.0
-    vite: ^6.2.5
   inlined:
     '@antfu/utils': ^9.2.0
   testing:
@@ -24,7 +17,7 @@ catalogs:
     yaml: ^2.7.1
   types:
     '@types/eslint-plugin-tailwindcss': ^3.17.0
-    '@types/node': ^22.14.0
+    '@types/node': ^22.14.1
   utils:
     eslint-flat-config-utils: ^2.0.1
     tinyexec: ^0.3.2

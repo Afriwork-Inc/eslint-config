@@ -12,8 +12,9 @@ describe.runIf(IS_READY)('exports-snapshot', async () => {
   )
 
   for (const pkg of packages) {
-    if (pkg.private)
+    if (pkg.private) {
       continue
+    }
     it(`${pkg.name}`, async () => {
       const manifest = await getPackageExportsManifest({
         importMode: 'src',

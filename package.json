@@ -2,7 +2,7 @@
   "name": "@afriwork/eslint-config",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.6.2",
+  "packageManager": "pnpm@10.8.0",
   "description": "Opinionated eslint config for projects within the Afriwork organization",
   "author": "Ezra Ashenafi <eazash22@gmail.com>",
   "license": "MIT",
@@ -35,13 +35,24 @@
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
+  "peerDependencies": {
+    "eslint-plugin-tailwindcss": "catalog:cli"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-tailwindcss": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:cli",
     "@antfu/ni": "catalog:cli",
     "@antfu/utils": "catalog:inlined",
+    "@types/eslint-plugin-tailwindcss": "catalog:types",
     "@types/node": "catalog:types",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
+    "eslint-flat-config-utils": "catalog:utils",
+    "eslint-plugin-tailwindcss": "catalog:cli",
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
     "tinyexec": "catalog:utils",

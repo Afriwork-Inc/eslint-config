@@ -43,8 +43,7 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "catalog:cli",
-    "eslint-flat-config-utils": "catalog:utils"
+    "@antfu/eslint-config": "catalog:cli"
   },
   "devDependencies": {
     "@antfu/ni": "catalog:cli",
@@ -53,6 +52,7 @@
     "@types/node": "catalog:types",
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
+    "eslint-flat-config-utils": "catalog:utils",
     "eslint-plugin-tailwindcss": "catalog:cli",
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",

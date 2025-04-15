@@ -4,13 +4,14 @@ catalogs:
     '@antfu/ni': ^24.3.0
     bumpp: ^10.1.0
     eslint: ^9.24.0
-    eslint-plugin-tailwindcss: ^3.18.0
     lint-staged: ^15.5.1
     simple-git-hooks: ^2.12.1
     tsup: ^8.4.0
     typescript: ^5.8.3
   inlined:
     '@antfu/utils': ^9.2.0
+  plugins:
+    eslint-plugin-tailwindcss: ^3.18.0
   testing:
     vitest: ^3.1.1
     vitest-package-exports: ^0.1.1

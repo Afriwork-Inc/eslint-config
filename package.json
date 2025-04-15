@@ -34,7 +34,7 @@
     "prepare": "simple-git-hooks"
   },
   "peerDependencies": {
-    "eslint-plugin-tailwindcss": "catalog:cli"
+    "eslint-plugin-tailwindcss": "catalog:plugins"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-tailwindcss": {
@@ -52,7 +52,7 @@
     "bumpp": "catalog:cli",
     "eslint": "catalog:cli",
     "eslint-flat-config-utils": "catalog:utils",
-    "eslint-plugin-tailwindcss": "catalog:cli",
+    "eslint-plugin-tailwindcss": "catalog:plugins",
     "lint-staged": "catalog:cli",
     "simple-git-hooks": "catalog:cli",
     "tinyexec": "catalog:utils",

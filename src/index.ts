@@ -25,11 +25,10 @@ type ConfigOptions = {
 
 }
 
-async function afriwork(options: ConfigOptions = {}): Promise<FlatConfigComposer<TypedFlatConfigItem, ConfigNames>> {
+function afriwork(options: ConfigOptions = {}): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>()
-  composer.append(await antfu({
+  composer.append(antfu({
     vue: options.vue || false,
-
   }))
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [
     stylistic(),

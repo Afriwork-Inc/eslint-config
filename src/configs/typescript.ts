@@ -9,6 +9,7 @@ export async function typescript(): Promise<TypedFlatConfigItem[]> {
       'ts/no-explicit-any': 'error',
       'node/prefer-global/process': ['error', 'always'],
       'jsdoc/no-multi-asterisks': ['warn', { allowWhitespace: true }],
+      'antfu/top-level-function': ['off'],
     },
   }]
 }

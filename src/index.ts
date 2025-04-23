@@ -6,6 +6,7 @@ import { stylistic } from './configs/stylistic'
 import { tailwindcss } from './configs/tailwindcss'
 import { typescript } from './configs/typescript'
 import { vue } from './configs/vue'
+import { yaml } from './configs/yaml'
 
 type ConfigOptions = {
   /**
@@ -33,6 +34,7 @@ function afriwork(options: ConfigOptions = {}): FlatConfigComposer<TypedFlatConf
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [
     stylistic(),
     typescript(),
+    yaml(),
   ]
   if (options.vue) {
     configs.push(
@@ -44,6 +46,7 @@ function afriwork(options: ConfigOptions = {}): FlatConfigComposer<TypedFlatConf
       tailwindcss(),
     )
   }
+
   composer.append(...configs)
   return composer
 }

@@ -5,7 +5,7 @@ export async function typescript(): Promise<TypedFlatConfigItem[]> {
   return [{
     files: [GLOB_TS, GLOB_TSX],
     rules: {
-      'ts/consistent-type-definitions': ['warn', 'type'],
+      'ts/consistent-type-definitions': ['off'],
       'ts/no-explicit-any': 'error',
       'node/prefer-global/process': ['error', 'always'],
       'jsdoc/no-multi-asterisks': ['warn', { allowWhitespace: true }],

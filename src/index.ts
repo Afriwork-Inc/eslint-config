@@ -24,12 +24,22 @@ type ConfigOptions = {
    */
   tailwindcss?: boolean
 
+  /**
+   * File ignore patterns
+   *
+   * @example
+   * ignore: ['.output/*']
+   * @see https://eslint.org/docs/latest/use/configure/ignore
+   */
+  ignores?: string[]
+
 }
 
 function afriwork(options: ConfigOptions = {}): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>()
   composer.append(antfu({
     vue: options.vue || false,
+    ignores: options.ignores,
   }))
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [
     stylistic(),

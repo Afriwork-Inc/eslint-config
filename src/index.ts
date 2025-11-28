@@ -25,6 +25,12 @@ type ConfigOptions = {
   tailwindcss?: boolean
 
   /**
+   * Ignore lockfiles
+   * @default true
+   */
+  ignoreLockfiles?: boolean
+
+  /**
    * File ignore patterns
    *
    * @example
@@ -35,11 +41,17 @@ type ConfigOptions = {
 
 }
 
-function afriwork(options: ConfigOptions = {}): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
+function afriwork(options: ConfigOptions = { ignoreLockfiles: true }): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const composer = new FlatConfigComposer<TypedFlatConfigItem, ConfigNames>()
+  const ignores = [
+    ...options.ignores ?? [],
+  ]
+  if (options.ignoreLockfiles) {
+    ignores.push('**/pnpm-lock.yaml', '**/yarn.lock', '**/package-lock.json', '**/bun.lock')
+  }
   composer.append(antfu({
     vue: options.vue || false,
-    ignores: options.ignores,
+    ignores,
   }))
   const configs: Awaitable<TypedFlatConfigItem[]>[] = [
     stylistic(),

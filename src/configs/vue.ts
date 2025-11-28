@@ -19,6 +19,7 @@ export async function vue(): Promise<TypedFlatConfigItem[]> {
         'ts/no-explicit-any': 'error',
         'node/prefer-global/process': ['error', 'always'],
         'jsdoc/no-multi-asterisks': ['warn', { allowWhitespace: true }],
+        'unicorn/no-instanceof-builtins': ['off'], // FIXME: Disabled due to perf issues in vue files
       },
     },
   ]
